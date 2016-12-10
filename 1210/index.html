@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://use.fontawesome.com/d5a1f49ab6.js"></script>
+    <style>
+        @import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
+        @import url('http://fonts.googleapis.com/css?faminly=Roboto');
+        *{
+            font-family: "Roboto","Noto Sans TC";
+        }
+        body,h1,h2,h3,h4,h5,h6,p{
+            margin: 0;
+            padding: 0;
+        }
+        img{
+            width: 100%;
+            border: 0;
+            vertical-align: top;
+            
+        }
+        .primary{
+            background-color: #ef0c0c;
+            color: #e6e6e6;
+        }
+        .full-width{
+            width: 100%;
+        }
+        .fixed-width{
+            width: 1200px;
+            margin: auto;
+        }
+        .col-4{
+            width: 280px;
+            margin: 10px;
+            float: left;
+            
+        }
+        .col-2{
+            width: 50%;
+            float: left;
+        }
+        .clearfix::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        nav .logo{
+            float: left;
+            width: 150px;
+            height: 100px;
+            background-color: #bbb;
+        }
+        nav .menu{
+            float: right;
+        }
+        nav .menu ul{
+            margin: 0;
+            padding: 0;
+        }
+        nav .menu li{
+            float: left;
+            list-style: none;
+        }
+        nav .menu a{
+            display: block;
+            line-height: 100px;
+            margin-left: 30px;
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+        }
+        header{
+            background-image: url(images/1.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            padding-top: 280px;
+            padding-bottom: 280px;
+            text-align: center;
+            color: #fff;
+        }
+        header .content h1{
+            font-size: 100px;
+            letter-spacing: 4px;
+        }
+        header .content p{
+            letter-spacing: 2em;
+        }
+        #about{
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+        
+        #about .title h2{
+            text-align: center;
+            padding-top: 50px;
+            padding-bottom: 100px;
+            font-size: 32px;
+            letter-spacing: 5px;
+            position: relative;
+           
+        }
+        #about .title h2::before{
+            content: "A";
+            position: absolute;
+            display: block;
+            width: 100%;
+            font-size: 160px;
+            top: -27px;
+            color: rgba(255,255,255,.25) ;
+        }
+        #about .col-4{
+            text-align: center;
+        }
+        #about .col-4 h3{
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        #about .col-4 p{
+            font-size: 14px;
+        }
+        #about .icon{
+            width: 150px;
+            height: 150px;
+            background-color: rgba(255,255,255, .1);
+            display: inline-block;
+            line-height: 160px;
+            border-radius:50%;
+            border: rgba(255,255,255,.13) 2px solid;
+        }
+        #service .col-2{
+            height: 400px;
+            
+        }
+        #service .wrapper:nth-of-type(1) .col-2:nth-of-type(1){
+            background-color:#111;
+            color: #eee;
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 0;
+        }
+         #service .wrapper .col-2::before{
+            content: "";
+             height: 100%;
+             display: inline-block;
+             vertical-align: middle;
+           
+        }
+         #service .wrapper:nth-of-type(1) .col-2:nth-of-type(1) .content{
+            display: inline-block;
+             vertical-align: middle;
+             font-size: 16px;
+             padding-left: 100px;
+             padding-right: 30px;
+        }
+        #service .wrapper:nth-of-type(1) .col-2:nth-of-type(1) .content a{
+            color: #eee;
+            border: 1px solid #eee;
+        }
+         #service .wrapper:nth-of-type(2) .col-2:nth-of-type(2) .content a{
+            color: #333;
+            border: 1px solid #333;
+        }
+        #service .wrapper .content h3{
+            border-left: 5px solid #ef0c0c;
+            padding-left: 20px;
+            margin-bottom: 20px;
+            font-size: 25px;
+        }
+        #service .wrapper .content p {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        #service .wrapper .content a{
+            display: inline-block;
+            text-decoration: none;
+            padding: 10px;
+            border:1px solid;
+        }
+        #service .wrapper:nth-of-type(1) .col-2:nth-of-type(2){
+            background-image: url(images/4.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+         #service .wrapper:nth-of-type(2) .col-2:nth-of-type(1){
+             background-image: url(images/3.jpg);
+             background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        #service .wrapper:nth-of-type(2) .col-2:nth-of-type(2){
+            background-color: #a8a8a8;
+            color: #333;
+            
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 0;
+        }
+
+         #service .wrapper:nth-of-type(2) .col-2:nth-of-type(2) .content{
+              display: inline-block;
+            vertical-align: middle;
+             font-size: 16px;
+             padding-left: 30px;
+             padding-right: 100px;
+        }
+        
+    </style>
+</head>
+<body>
+    <nav class="full-width">
+       <div class="fixed-width">
+           <div class="logo"></div>
+           <div class="menu">
+               <ul>
+                   <li><a href="#">MENU</a></li>
+                   <li><a href="#">MENU</a></li>
+                   <li><a href="#">MENU</a></li>
+                   <li><a href="#">MENU</a></li>
+                   <li><a href="#">MENU</a></li>
+                   <li><a href="#">MENU</a></li>
+                   <li><a href="#">MENU</a></li>
+                  
+               </ul>
+           </div>
+       </div>
+    </nav>
+    <header class="full-width">
+        <div class="content">
+            <h1>CREATIVES</h1>
+            <p>LOVE THE MOON!</p>
+        </div>
+    </header>
+    <div id="about" class="full-width primary clearfix">
+         <div class="title"><h2>ABOUT</h2></div>
+        <div class="fixed-width">
+           <div class="col-4">
+               <div class="icon"><span class="fa fa-bolt fa-lg"></span></div>
+               <h3>DESIGN</h3>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet illum, consequatur. </p>
+           </div>
+           <div class="col-4">
+               <div class="icon"><span class="fa fa-fire fa-lg"></span></div>
+               <h3>FEATURES</h3>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet illum, consequatur. </p>
+           </div>
+           <div class="col-4">
+                <div class="icon"><span class="fa fa-ship fa-lg"></span></div>
+               <h3>IDEAS</h3>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet illum, consequatur. </p>
+           </div>
+           <div class="col-4">
+                <div class="icon"><span class="fa fa-support fa-lg"></span></div>
+               <h3>SUPPORT</h3>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet illum, consequatur. </p>
+           </div>
+        </div>
+    </div>
+    <div id="service" class="full-width">
+        <div class="wrapper">
+            <div class="col-2">
+               ::before
+                <div class="content">
+                    <h3>QWER OIUOLY</h3>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis ratione eligendi, minus non nobis nemo. Excepturi hic, eius quos perferendis numquam, enim. Cum perspiciatis praesentium aperiam, quod quas doloremque, cupiditate!</p>
+                   <a href="#">More...</a>
+                </div>
+            </div>
+            <div class="col-2"></div>
+        </div>
+         <div class="wrapper">
+            <div class="col-2"></div>
+            <div class="col-2">
+                ::before
+                <div class="content">
+                    <h3>QWER OIUOIY</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore quidem aperiam obcaecati, ullam ad quia, iste accusantium voluptatibus laborum a nihil. Quam sunt itaque commodi quo, esse illum nihil maiores.</p>
+                    <a href="#">More...</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
